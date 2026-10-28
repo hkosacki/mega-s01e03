@@ -1,0 +1,39 @@
+---
+layout: runbook
+title: '#4471 triage · split parser and hint causes'
+owner: support desk
+status: resolved
+reviewed: 2026-10-28
+signature: hkosacki
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+Ticket #4471 merged 412 reports across 11 tenants as a single date issue. Closer analysis of the reports and tenant configurations reveals two distinct bugs rather than one:
+
+1. **Parser bug (`parser`)**: 379 reports across 11 tenants. The shared date parser reads dates as month-first (`MM/DD/YYYY`). Day-first tenants (`DD/MM/YYYY`) have their days and months transposed when the day is 12 or less. Filed as **Ticket #1** in our repository.
+2. **Form hint bug (`hint`)**: 33 reports across 3 tenants (`alder.physio`, `copper.studio`, `pale.harbour`). The `booking-v3` form displays an `MM/DD/YYYY` placeholder hint to people booking with day-first tenants, leading them to enter the month first. Filed as **Ticket #2** in our repository.
+
+<Callout>
+Split into two distinct tickets. 379 reports belong to the shared parser; 33 reports belong to the booking-v3 form hint.
+</Callout>
+
+## Reports breakdown
+
+<CauseTable ticket={4471} />
+
+## Intake timeline
+
+<QueueTimeline ticket={4471} />
+
+## Resolution
+
+- **Ticket #1 (`parser`):** Queued fix for the date parser to respect tenant locale date order.
+- **Ticket #2 (`hint`):** Queued fix for `booking-v3` form to display localized date hint matching the tenant locale.
+
+<RenderStamp signature="hkosacki" />
