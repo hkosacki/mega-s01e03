@@ -4,7 +4,7 @@ title: '#4471 triage · split parser and hint causes'
 owner: support desk
 status: closed
 reviewed: 2026-10-28
-signature: hkosacki
+signature: "v1.eyJzdWIiOiIyNDIyIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMjg0NzIsImV4cCI6MTc5MzMxNDg3Mn0.KC_oYNadaPUsnsCLExkDafh-HLLUt94Fu0xbO5vs77s"
 ---
 
 <script>
@@ -37,4 +37,4 @@ Closed 05 Oct. Parser bug fixed; form hint retired with booking-v3 form.
 - **Ticket #1 (`parser`):** FIXED & closed — `fix(dates): parse dd/mm for eu locales`.
 - **Ticket #2 (`hint`):** WON'T FIX & closed — `booking-v3 form retired`.
 
-<RenderStamp signature="hkosacki" />
+<RenderStamp signature="v1.eyJzdWIiOiIyNDIyIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMjg0NzIsImV4cCI6MTc5MzMxNDg3Mn0.KC_oYNadaPUsnsCLExkDafh-HLLUt94Fu0xbO5vs77s" />
