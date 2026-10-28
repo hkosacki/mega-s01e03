@@ -2,7 +2,7 @@
 layout: runbook
 title: '#4471 triage · split parser and hint causes'
 owner: support desk
-status: resolved
+status: closed
 reviewed: 2026-10-28
 signature: hkosacki
 ---
@@ -20,7 +20,7 @@ Ticket #4471 merged 412 reports across 11 tenants as a single date issue. Closer
 2. **Form hint bug (`hint`)**: 33 reports across 3 tenants (`alder.physio`, `copper.studio`, `pale.harbour`). The `booking-v3` form displays an `MM/DD/YYYY` placeholder hint to people booking with day-first tenants, leading them to enter the month first. Filed as **Ticket #2** in our repository.
 
 <Callout>
-Split into two distinct tickets. 379 reports belong to the shared parser; 33 reports belong to the booking-v3 form hint.
+Closed 05 Oct. Parser bug fixed; form hint retired with booking-v3 form.
 </Callout>
 
 ## Reports breakdown
@@ -31,9 +31,10 @@ Split into two distinct tickets. 379 reports belong to the shared parser; 33 rep
 
 <QueueTimeline ticket={4471} />
 
-## Resolution
+## Engineering update & Resolution
 
-- **Ticket #1 (`parser`):** Queued fix for the date parser to respect tenant locale date order.
-- **Ticket #2 (`hint`):** Queued fix for `booking-v3` form to display localized date hint matching the tenant locale.
+- **#4471 closed 05 Oct**
+- **Ticket #1 (`parser`):** FIXED & closed — `fix(dates): parse dd/mm for eu locales`.
+- **Ticket #2 (`hint`):** WON'T FIX & closed — `booking-v3 form retired`.
 
 <RenderStamp signature="hkosacki" />

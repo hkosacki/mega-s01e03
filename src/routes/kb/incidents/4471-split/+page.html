@@ -43,7 +43,7 @@
     <h1>#4471 triage · split parser and hint causes</h1>
     <p class="meta">
       <span>owner <b>support desk</b></span>
-      <span class="status resolved">resolved</span>
+      <span class="status closed">closed</span>
       <span>reviewed 2026-10-28 · 0 days ago</span>
     </p>
   </header>
@@ -54,7 +54,7 @@
       <li><strong>Form hint bug (<code>hint</code>)</strong>: 33 reports across 3 tenants (<code>alder.physio</code>, <code>copper.studio</code>, <code>pale.harbour</code>). The <code>booking-v3</code> form displays an <code>MM/DD/YYYY</code> placeholder hint to people booking with day-first tenants, leading them to enter the month first. Filed as <strong>Ticket #2</strong> in our repository.</li>
     </ol>
     <div class="callout">
-      Split into two distinct tickets. 379 reports belong to the shared parser; 33 reports belong to the booking-v3 form hint.
+      Closed 05 Oct. Parser bug fixed; form hint retired with booking-v3 form.
     </div>
     <h2>Reports breakdown</h2>
     <p class="sum"><strong>412</strong> reports merged into #4471 · <strong>2</strong> causes</p>
@@ -84,10 +84,11 @@
     <p class="note">5 reports read as a one-day move; filed under <code>parser</code> by tenant.</p>
     <h2>Intake timeline</h2>
     <p class="tags">Weekly intake across 412 reports from 2026-03-30 to 2026-10-05.</p>
-    <h2>Resolution</h2>
+    <h2>Engineering update &amp; Resolution</h2>
     <ul>
-      <li><strong>Ticket #1 (<code>parser</code>):</strong> Queued fix for the date parser to respect tenant locale date order.</li>
-      <li><strong>Ticket #2 (<code>hint</code>):</strong> Queued fix for <code>booking-v3</code> form to display localized date hint matching the tenant locale.</li>
+      <li><strong>#4471 closed 05 Oct</strong></li>
+      <li><strong>Ticket #1 (<code>parser</code>):</strong> FIXED &amp; closed &mdash; <code>fix(dates): parse dd/mm for eu locales</code>.</li>
+      <li><strong>Ticket #2 (<code>hint</code>):</strong> WON'T FIX &amp; closed &mdash; <code>booking-v3 form retired</code>.</li>
     </ul>
     <p class="stamp">desk ref <b>DR-0WM7-MSJJ</b></p>
   </main>
